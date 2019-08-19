@@ -30,7 +30,7 @@ void QuickSort(int arr[], int low, int high){
 	while(low < high){
 		int p = partition(arr, low, high);
 
-		if(p - low <= high -p){
+		if(p - low <= high - p){
 			QuickSort(arr, low, p-1);
 			low = p + 1;
 		}
