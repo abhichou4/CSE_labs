@@ -1,17 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "array_stack.h"
 
-#define MAX_LEN 100
-#define true 1
-#define false 0
-
-typedef struct{
-	char arr[MAX_LEN];
-	int top;
-} stack;
+stack* make_stack(int size){
+	stack* s;
+	s = (stack*) malloc(sizeof(stack));
+	s->top = -1;
+	s->arr = (char*)malloc(size*sizeof(char));
+	s->capacity = size;
+	return s;
+}
 
 int isFull(stack* s){
-	if(s->top==MAX_LEN-1) return true;
+	if(s->top==s->capacity-1) return true;
 	else return false;
 }
 
@@ -25,9 +26,13 @@ void push(stack* s, char ele){
 	else printf("Stack Overflow\n");
 }
 
-void pop(stack* s){
-	if(!isEmpty(s)) {char ele = s->arr[(s->top)--]; printf("%c popped from stack at %d\n", ele, (s->top)+1);}
-	else printf("Stack Underflow\n");
+char pop(stack* s){
+	if(!isEmpty(s)) {char ele = s->arr[(s->top)--]; printf("%c popped from stack at %d\n", ele, (s->top)+1); return ele;}
+	else printf("Stack Underflow\n"); return -1;
+}
+
+char peek(stack* s){
+	return s->arr[s->top];
 }
 
 void display(stack* s){
@@ -40,4 +45,3 @@ void display(stack* s){
 	}
 	printf("\n");
 }
-
