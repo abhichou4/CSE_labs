@@ -49,6 +49,15 @@ void infix_to_prefix(char* infix, char* prefix){
 			}
 			c=pop(stk);
 		}
+		else if (infix[i]=='^'){
+			if (peek(stk)=='^'){
+				prefix[++k]=pop(stk);
+				push(stk, infix[i]);
+			}
+			else{
+				push(stk, infix[i]);
+			}
+		}
 		else{
 			while(Pref(peek(stk)) > Pref(infix[i])){
 				prefix[++k] = pop(stk);
@@ -56,7 +65,6 @@ void infix_to_prefix(char* infix, char* prefix){
 			push(stk, infix[i]);
 		}
 	}
-	display(stk);
 	rev_string(prefix);
 	return;
 }

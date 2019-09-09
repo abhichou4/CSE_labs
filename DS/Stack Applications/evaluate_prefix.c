@@ -20,7 +20,7 @@ char Ops(char e1, char e2, char op){
 			return res + '0';
 
 		case '-': ;
-			res = e1-'0' - e2-'0';
+			res = (e1-'0') - (e2-'0');
 			return res + '0';
 
 		case '*': ;
@@ -28,14 +28,13 @@ char Ops(char e1, char e2, char op){
 			return res + '0';
 
 		case '/': ;
-			res = (e2-'0')/(e1-'0');
-			return res + '0';
+			float r = (e2-'0')/(e1-'0');
+			return r + '0';
 	}
 }
 
 char eval_prefix(char* prefix){
 	rev_string(prefix);
-	puts(prefix);
 	stack* stk = make_stack(strlen(prefix));
 	for(int i=0; prefix[i]!='\0'; i++){
 

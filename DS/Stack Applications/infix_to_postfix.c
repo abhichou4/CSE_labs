@@ -9,7 +9,6 @@ int isOperand(char ch){
 
 int Pref(char ch){
 	switch(ch){
-
 		case '^': return 3;
 		case '*':
 		case '/': return 2;
@@ -36,6 +35,17 @@ void infix_to_postfix(char* infix, char* postfix){
 			while(c!='('){
 				postfix[++k]=c;
 				c = pop(stk);
+			}
+		}
+		else if (infix[i]=='^'){
+			if (peek(stk)=='^'){
+				push(stk, infix[i]);
+			}
+			else{
+				while(Pref(peek(stk)) >= Pref(infix[i])){
+					postfix[++k] = pop(stk);
+				}
+				push(stk, infix[i]);
 			}
 		}
 		else{
