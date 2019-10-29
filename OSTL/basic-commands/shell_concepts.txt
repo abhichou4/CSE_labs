@@ -1,0 +1,33 @@
+COMMON SHELL CONCEPTS 
+
+1. Wild-cards 
+
+Wild-card      
+ 
+*			Any number of chars including null
+? 			Any missing charracter 
+[ijk]			single char from i, j, or k
+[a-z] 			single char from a to z
+[!ijk]			Any single char but ijk
+{*.doc, *.pdf} 		Specify multiple parts 
+
+2. Pipes 
+
+ls | wc -l : Counts number of files/dirs in current folder
+start output of ls is the standard input to wc -l
+
+3. Command Substitution 
+
+Comman argument is obtained form another comman 
+echo "Today's date is 'date'"
+
+4. Sequeces 
+
+command1; command2
+
+5. Conditional Sequencing 
+
+cmd1 && cmd2 - cmd2 executes when cmd1 succeds
+cmd1 || cmd2 - cmd2 executed when cmd1 fails
+
+

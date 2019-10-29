@@ -1,0 +1,26 @@
+REDIRECTIONAL OPERATORS
+
+There are three streams by default in languages like C, C++ and Java 
+which can be altered by system defined variable (symbolic names)
+
+1. > standard output operator
+ls > filename.txt
+cat file1.txt file2.txt > file3.txt
+
+2. < standart input oprator 
+cat<file1.txt > file2.txt (cp command)
+
+3. >> append operator 
+command>>file
+
+4. << document operator 
+To take dat from the same file itself (referred to as here document)
+Any file that can take satndart input can use here document to get data 
+
+Example:
+
+cat<<DELIMITER 
+This is dumb.
+DELIMITER 
+
+displays 'This is dumb'

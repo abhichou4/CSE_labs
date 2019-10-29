@@ -1,0 +1,13 @@
+PERMISSIONs
+
+Three kinds - read, write, execute 
+Defined for - user, group, others 
+
+444 - represents 
+4 - for user, group and others (r--)
+
+
+chmod [for]+[perm] file/dir name(s)
+chmod [octal] file/dir names(s) 
+
+

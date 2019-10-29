@@ -1,0 +1,14 @@
+SHELL VARIABLES
+
+Shell has local and environment varibale. When a child shell is made by using (sh) a copy of evironment varibales is given to them but not the local variables.
+Thus, child shells only communicate through environment variables
+('export' is used to make environment varibales) 
+
+1. Creating/Assiging variables
+   name=value
+
+2. Reading from stdin
+   read name 
+
+3. Read-only variable 
+   readonly name

@@ -1,0 +1,18 @@
+RUNNING JOBS IN THE BACKGROUND
+
+Multi-tasking allows you to run jobs in the background. This can be done in two ways 
+
+1. commandd &
+PID is returned and the process runs in the background. But this process will be closed as soon as the parent shell is closed 
+
+2. nohup command &
+nohup (no hangup) allows running processes even after the shell has been closed.
+The stdout of the command is sent to the file nohup.out
+
+JOB CONTROL 
+
+1. ps
+2. kill 
+3. sleep
+4. wait
+ 

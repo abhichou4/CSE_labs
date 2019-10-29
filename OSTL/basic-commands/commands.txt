@@ -1,0 +1,55 @@
+BASIC COMMANDS 
+
+who - all users 
+who am i - current user 
+echo $USER - current user name 
+
+ls -
+option -l:
+1. File or directory 
+2. Number of hard-links (ln -l, sub-directiories)
+Any folder has atleast 2 hard links (. and ..)
+3. group name
+4. size
+5. modification time 
+6. Name 
+
+option -a:
+Shows files and sub-dirs in current dir.
+
+cp [source] [dest]
+Only used for fime 
+
+mv -
+1. Move files to dir - mv file(s) dir
+2. Rename files - mv filename new_name 
+Note : if dest file doesn't exist it will create one
+       it doesn't promt anything when overwriting dest file if it exits 
+Can be used for both files and folders 
+
+rm - works for file 
+rmdir - for dirs 
+
+chmod discussed later.
+
+date - Current date as maintained in internal clock run perpetually
+man {command name/system clall name}
+
+wc - 
+option -c: Counts bytes
+option -m: Counts chars 
+option -C: Counts chars 
+option -l: Counts lines 
+option -w: Counts words (delimiter=" " or new_line)
+
+FILE-FILTER COMMANDS 
+
+1. head - displays first 10 lines
+(head -[num of line])
+2. tail - last 10 lines
+(same)
+3. more - displays contents in form of page views 
+4. grep <word name> <filename>
+   grep -E 'word1|word2|word3' <filename>
+5. sort <filename>
+   sort -r (sorts in reverse)
