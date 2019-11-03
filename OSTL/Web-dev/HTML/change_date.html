@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Calander</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<p id="month"></p>
+	<p id="date"></p>
+	<script type="text/javascript">
+		var d = new Date();
+		document.getElementById("month").innerHTML = d.getMonth();
+		document.getElementById("date").innerHTML = d.getDate();
+	</script>
+	<script type="text/javascript">
+		function incMonth(){
+			var month = document.getElementById("month").innerHTML;
+			document.getElementById("month").innerHTML = ""+(parseInt(month)+1)%13;
+			if(document.getElementById("month").innerHTML == ""+0)
+				document.getElementById("month").innerHTML = 1;
+		}
+		function incDay(){
+			var date = document.getElementById("date").innerHTML
+			var month = document.getElementById("month").innerHTML
+			if (month==2){
+				document.getElementById("date").innerHTML = (parseInt(date)+1)%29;
+				
+			}
+			else if(month!=2 && month%2==0){
+				document.getElementById("date").innerHTML = (parseInt(date)+1)%30;
+			}
+			else{
+				document.getElementById("date").innerHTML = (parseInt(date)+1)%31;
+			}
+			if(document.getElementById("date").innerHTML == ""+0)
+				document.getElementById("date").innerHTML = 1;
+		}
+	</script>
+	<button id="nextm" value="nextmonth" onclick="incMonth()">Next Month</button>
+	<button id="nextd" value="nextday" onclick="incDay()">Next Date</button>
+</body>
+</html>

@@ -14,5 +14,5 @@ echo "first param"
 echo $1
 echo "second param"
 echo $2
-echo "List of all params in single pariable"
+echo "List of all params in single variable"
 echo $*

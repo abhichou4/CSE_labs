@@ -1,0 +1,8 @@
+LIST VARIABLES
+
+declare -a list
+list[0]="string"
+list[2]="something"
+.
+.
+.

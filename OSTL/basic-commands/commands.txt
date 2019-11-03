@@ -18,7 +18,7 @@ option -a:
 Shows files and sub-dirs in current dir.
 
 cp [source] [dest]
-Only used for fime 
+Only used for files 
 
 mv -
 1. Move files to dir - mv file(s) dir

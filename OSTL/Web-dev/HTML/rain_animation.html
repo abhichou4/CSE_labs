@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rain</title>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var c = document.getElementById("myCanvas");
+		c.height = window.innerHeight;
+		c.width = window.innerWidth;
+		var ctx = c.getContext("2d");
+		var font_size = 10;
+		var colums = c.width/font_size;
+		var y = [];
+		for(var x=0; x<colums; x++){
+			y[x] = 1;
+		}
+		function draw(){
+			ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+			ctx.fillRect(0, 0, c.width, c.height);
+			ctx.font = font_size + "px arial";
+			ctx.fillStyle = "blue";;
+			for(i=0; i<y.length; i++){
+				ctx.fillText("0", i*font_size, y[i]*font_size);
+				if(y[i]*font_size>c.height && Math.random()>0.95){
+					y[i]=0;
+				}
+				y[i]++;
+			}
+		}
+		setInterval(draw, 30);
+	</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+LIST VARIABLES 
+
+Syntax: declare [-ax][listname]
