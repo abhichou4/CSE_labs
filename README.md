@@ -1,8 +1,8 @@
 # Codelabs 
-Is this an incentive to complete my labs and not scroll through Reddit with [@anish0x2a](https://github.com/anish0x2a)?
-Yes. 
-Will this actually work? 
-Fuck no.
+Is this an incentive to complete my labs and not scroll through Reddit with [@anish0x2a](https://github.com/anish0x2a)?<br/>
+Yes.<br/>
+Will this actually work?<br/>
+Fuck no.<br/>
 # Contents 
 1. Data Structures & Applications (C)
 2. Obejct Oriented Programming (Java)
