@@ -1,5 +1,5 @@
 # Codelabs 
-Is this an incentive to complete my labs and not scroll through Reddit with @anish0x2a[https://github.com/anish0x2a]?
+Is this an incentive to complete my labs and not scroll through Reddit with [@anish0x2a](https://github.com/anish0x2a)?
 Yes. 
 Will this actually work? 
 Fuck no.
