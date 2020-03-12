@@ -9,7 +9,7 @@ int* heap_bottom_up(int* arr, int n) {
 		bool heap = false;
 		while (!heap && 2*k<n) {
 			int j=2*k;
-			if (j<=n){
+			if (j<n){
 				if (arr[j] < arr[j+1]) j=j+1;
 				if (v > arr[j]) heap=true;
 				else {arr[k]=arr[j]; k=j;}

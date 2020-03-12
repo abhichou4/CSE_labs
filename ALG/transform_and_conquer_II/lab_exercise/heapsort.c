@@ -27,23 +27,24 @@ void heapify(int* arr, int n) {
 	}
 }
 
-void heap_top_bottom(int* arr, int n) {
-	for (int i=2; i<=n; i++)
-		heapify(arr, i);
+void heapsort(int* arr, int n) {
+	heapify(arr, n);
+	for (int i=n; i>1; i--) {
+		swap(arr+i, arr);
+		heapify(arr, i-1);
+	}
 }
-
 
 int main(void) {
 
 	int n;
-	printf("Enter length of array:\n");
+	printf("Enter number of elements:\n");
 	scanf("%d", &n);
 	int* arr = (int*)calloc(n+1, sizeof(int));
-	printf("Enter Array:\n");
-	for (int i=1; i<=n; i++) scanf("%d", &arr[i]);
-	heap_top_bottom(arr, n);
-	printf("Max Heap:\n");
-	for (int i=1; i<=n; i++) printf("%d ", arr[i]);
-	printf("\n");
-	return 0;
+	printf("Enter elements:\n");
+	for (int i=1; i<=n; i++) 
+		scanf("%d", &arr[i]);
+	heapsort(arr, n);
+	for (int i=1; i<=n; i++) 
+		printf("%d ", arr[i]);
 }
