@@ -1,8 +1,5 @@
 # Codelabs 
-Is this an incentive to complete my labs and not scroll through Reddit with [@trickarcher](https://github.com/trickarcher)?<br/>
-Yes.<br/>
-Will this actually work?<br/>
-...
+
 # Contents 
 1. Data Structures & Applications (C)
 2. Obejct Oriented Programming (Java)
